@@ -51,11 +51,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.18.77.56",
-            "port": 80,
+            "address": "172.67.109.84",
+            "port": 2083,
             "users": [
               {
-                "id": "11acb167-58ca-454d-a890-06d32cc75591",
+                "id": "41e0ed33-cebd-4b5f-ab2f-bacd9fc30ef9",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -66,12 +66,20 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/spartacus",
-          "headers": {
-            "Host": "bayetir-taktir-tirandaz-pencile-schooll-trackk-manster-bomb110.bul315.workers.dev"
-          }
+        "network": "grpc",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "mic.mahdi-mic-irancel-hamrah-pofyos-dayos.blog",
+          "show": false
+        },
+        "grpcSettings": {
+          "serviceName": "",
+          "multiMode": false,
+          "idle_timeout": 60,
+          "health_check_timeout": 20,
+          "permit_without_stream": false,
+          "initial_windows_size": 0
         }
       },
       "mux": {
@@ -112,6 +120,36 @@
           "api"
         ],
         "outboundTag": "api"
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "domain:example-example.com",
+          "domain:example-example2.com"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "block",
+        "domain": [
+          "geosite:category-ads-all"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "geosite:cn"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:private",
+          "geoip:cn"
+        ]
       },
       {
         "type": "field",
